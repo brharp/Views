@@ -4,7 +4,7 @@
 
 Views have a parent, a class, a name (id), text, size, position. Create a view:
 
-create_view (class_name, view_name, style, x, y, width, height, parent, menu, session, params)
+create_view (class_name, view_name, style, x, y, width, height, parent, id, session, params)
 
 ## View Procedures
 
