@@ -4,11 +4,33 @@
 
 Views have a parent, a class, a name (id), text, size, position. Create a view:
 
+````
 create_view (class_name, view_name, style, x, y, width, height, parent, id, session, params)
+````
 
 ## View Procedures
 
 Every view class has a view procedure that defines the behaviour of that class of views.  Views respond to messages.
+
+````
+view_proc (view, msg, param)
+````
+
+`param` is a union of message parameters.
+
+````
+union tag_msg_param
+  {
+    struct { char *s; } input_msg;
+    struct { int x; int y; } mouse_msg;
+  }
+
+struct tag_msg
+  {
+    int msg;
+    union msg_param param;
+  }
+````
 
 ### Example view messages
 
